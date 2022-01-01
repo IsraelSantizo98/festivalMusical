@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet" crossorigin="use-credentials">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
@@ -23,11 +23,20 @@
             </nav>
         </div>
     </header>
-    <video autoplay muted loop>
-        <!-- Colocar opcion siempre de mp4 -->
-        <source src="video/concierto.mp4" type="video/mp4">
-        <source src="video/concierto.ogg" type="video/ogg">
-        <source src="video/concierto.webm" type="video/webm">
-    </video>
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2>Rock & EDM Festival</h2>
+                <p>Enero 2023, Guatemala, Guatemala</p>
+            </div>
+        </div>
+        <video autoplay muted loop>
+            <!-- Colocar opcion siempre de mp4 -->
+            <source src="video/concierto.mp4" type="video/mp4">
+            <source src="video/concierto.ogg" type="video/ogg">
+            <source src="video/concierto.webm" type="video/webm">
+        </video>
+    </div>
+    
 </body>
 </html>
