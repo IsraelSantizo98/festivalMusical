@@ -1,5 +1,5 @@
 //CSS
-const { src, dest, watch } = require('gulp'); //Retorna multiples funciones de lo contrario se coloca nombre
+const { src, dest, watch, parallel } = require('gulp'); //Retorna multiples funciones de lo contrario se coloca nombre
 const sass = require("gulp-sass")(require('sass')); //Ir a la carpeta de node-module gulp-sass para poder compilarlo
 const plumber = require('gulp-plumber');
 //Imagenes
@@ -18,7 +18,7 @@ function versionWebp(done){
     };
     src('src/img/**/*.{png,jpg}')
         .pipe(webp(opciones))
-        .pipe(dest('buil/img'))
+        .pipe(dest('build/img'))
     done();
 }
 function dev(done){
@@ -26,6 +26,6 @@ function dev(done){
     done();
 }
 /* Habilitar tarea para la terminal */
-exports.dev = dev;
-exports.versionWebp = versionWebp;
 exports.css = css;
+exports.versionWebp = versionWebp;
+exports.dev = parallel(versionWebp, dev);
