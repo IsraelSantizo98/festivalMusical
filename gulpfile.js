@@ -52,3 +52,4 @@ exports.imagenes = imagenes;
 exports.avif = avif;
 exports.versionWebp = versionWebp;
 exports.dev = parallel(versionWebp, imagenes, dev, versionAvif);
+exports.devs = dev;
