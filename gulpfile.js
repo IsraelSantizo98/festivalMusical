@@ -42,14 +42,21 @@ function versionAvif(done){
         .pipe(dest('build/img'))
     done();
 }
+function javascript(done){
+    src('src/js/**/*.js')
+        .pipe(dest('build/js'));
+    done();
+}
 function dev(done){
     watch('src/scss/**/*.scss', css);//Que archivo se le permite el watch y luego la funcion css que es la tarea
+    watch('src/scss/**/*.js', javascript);//Que archivo se le permite el watch y luego la funcion css que es la tarea
     done();
 }
 /* Habilitar tarea para la terminal */
 exports.css = css;
+exports.javascript = javascript;
 exports.imagenes = imagenes;
 exports.avif = avif;
 exports.versionWebp = versionWebp;
-exports.dev = parallel(versionWebp, imagenes, dev, versionAvif);
+exports.dev = parallel(versionWebp, imagenes, dev, versionAvif, javascript);
 exports.devs = dev;
