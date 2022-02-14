@@ -11,6 +11,10 @@ html{
 body{
     font-family: v.$fuente_principal;
     font-size: 1.6rem;
+    //Se coloca la & cuando es una clase extra agregada por js
+    &.fijar-body{
+        overflow: hidden;//quita el scroll
+    }
 }
 p{
     font-size: 2rem;
