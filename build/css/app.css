@@ -739,3 +739,13 @@ En el parametro se puede colocar otro predeterminado
   font-size: 2.4rem;
   font-weight: 700;
 }
+
+.site-footer {
+  background-color: #f53756;
+  padding: 1rem;
+}
+.site-footer p {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
