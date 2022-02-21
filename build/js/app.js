@@ -57,6 +57,7 @@ function mostrarImagen(id) {
     const overlay = document.createElement('DIV');
     overlay.appendChild(imagen);
     overlay.classList.add('overlay');
+    //funciona para cerrar el overlay al dar click fuera del overlay
     overlay.onclick = function() {
         const body = document.querySelector('body');
         body.classList.remove('fijar-body');
@@ -68,13 +69,11 @@ function mostrarImagen(id) {
     cerrarModal.classList.add('btn-cerrar');
     cerrarModal.onclick = function() {
         const body = document.querySelector('body');
-        body.classList.remove('fijar-body');
-        overlay.remove();
+        overlay.remove();//quita el overlay
     }
     overlay.appendChild(cerrarModal);
     // Añadirlo al HTML
     const body = document.querySelector('body');
     body.appendChild(overlay);
-    body.classList.add('fijar-body');
+    body.classList.add('fijar-body');//fija el body en los globales
 }
-console.log('hola')
