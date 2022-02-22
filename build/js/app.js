@@ -11,7 +11,7 @@ function navegacionFija() {
     const sobreFestival = document.querySelector('.sobre-festival');
     const body = document.querySelector('body');
     window.addEventListener('scroll', function() {
-        if( sobreFestival.getBoundingClientRect().bottom < 0  ) {
+        if( sobreFestival.getBoundingClientRect().bottom < 0  ) { //metodo para la ubicaciones de elementos
             barra.classList.add('fijo');
             body.classList.add('body-scroll');
         } else {
@@ -22,9 +22,10 @@ function navegacionFija() {
 }
 function scrollNav() {
     const enlaces = document.querySelectorAll('.navegacion-principal a');
+    //El evento click al ser mas de un elemento a se debe usar foreach para iterar uno por uno
     enlaces.forEach( enlace => {
         enlace.addEventListener('click', function(e) {
-            e.preventDefault();
+            e.preventDefault();//Se usa pare evitar el comportamiento por defualt
             const seccionScroll = e.target.attributes.href.value;
             const seccion = document.querySelector(seccionScroll);
             seccion.scrollIntoView({ behavior: "smooth"});

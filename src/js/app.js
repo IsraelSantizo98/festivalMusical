@@ -11,7 +11,7 @@ function navegacionFija() {
     const sobreFestival = document.querySelector('.sobre-festival');
     const body = document.querySelector('body');
     window.addEventListener('scroll', function() {
-        if( sobreFestival.getBoundingClientRect().bottom < 0  ) {
+        if( sobreFestival.getBoundingClientRect().bottom < 0  ) { //metodo para la ubicaciones de elementos
             barra.classList.add('fijo');
             body.classList.add('body-scroll');
         } else {

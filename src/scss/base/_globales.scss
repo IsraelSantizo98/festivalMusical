@@ -15,6 +15,9 @@ body{
     &.fijar-body{
         overflow: hidden;//quita el scroll
     }
+    &.body-scroll{
+        padding-top: 8.6rem;//del mismo tamaño que el elemento en este caso el header por tener un fixed
+    }
 }
 p{
     font-size: 2rem;
